@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/og-image.svg" alt="standra.ai — Open standards for AI-assisted engineering" width="800" />
+</p>
+
 # standra.ai
 
 **Open standards and tooling for AI-assisted engineering.**

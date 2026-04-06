@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f1729;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hub1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066ff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#5544ff;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#aa44ff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ff44dd;stop-opacity:0.6" />
+    </linearGradient>
+    <linearGradient id="hub2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5544ff;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#aa44ff;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#ff44dd;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066ff" />
+      <stop offset="50%" style="stop-color:#aa44ff" />
+      <stop offset="100%" style="stop-color:#ff44dd" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066ff;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#aa44ff;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#ff44dd;stop-opacity:0.3" />
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="3" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="0" x2="0" y2="630" /><line x1="60" y1="0" x2="60" y2="630" />
+    <line x1="120" y1="0" x2="120" y2="630" /><line x1="180" y1="0" x2="180" y2="630" />
+    <line x1="240" y1="0" x2="240" y2="630" /><line x1="300" y1="0" x2="300" y2="630" />
+    <line x1="360" y1="0" x2="360" y2="630" /><line x1="420" y1="0" x2="420" y2="630" />
+    <line x1="480" y1="0" x2="480" y2="630" /><line x1="540" y1="0" x2="540" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" /><line x1="660" y1="0" x2="660" y2="630" />
+    <line x1="720" y1="0" x2="720" y2="630" /><line x1="780" y1="0" x2="780" y2="630" />
+    <line x1="840" y1="0" x2="840" y2="630" /><line x1="900" y1="0" x2="900" y2="630" />
+    <line x1="960" y1="0" x2="960" y2="630" /><line x1="1020" y1="0" x2="1020" y2="630" />
+    <line x1="1080" y1="0" x2="1080" y2="630" /><line x1="1140" y1="0" x2="1140" y2="630" />
+    <line x1="0" y1="60" x2="1200" y2="60" /><line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" /><line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" /><line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="420" x2="1200" y2="420" /><line x1="0" y1="480" x2="1200" y2="480" />
+    <line x1="0" y1="540" x2="1200" y2="540" />
+  </g>
+
+  <!-- Ambient glow behind hub icon -->
+  <ellipse cx="180" cy="280" rx="120" ry="140" fill="#aa44ff" opacity="0.06" filter="url(#blur)" />
+
+  <!-- Hub-and-spoke icon: central node with 5 satellites -->
+  <g transform="translate(115, 170)">
+    <!-- Connecting spokes (drawn first, behind nodes) -->
+    <line x1="65" y1="110" x2="65" y2="20" stroke="url(#hub1)" stroke-width="2" opacity="0.5" />
+    <line x1="65" y1="110" x2="135" y2="65" stroke="url(#hub1)" stroke-width="2" opacity="0.5" />
+    <line x1="65" y1="110" x2="125" y2="170" stroke="url(#hub1)" stroke-width="2" opacity="0.5" />
+    <line x1="65" y1="110" x2="5" y2="170" stroke="url(#hub1)" stroke-width="2" opacity="0.5" />
+    <line x1="65" y1="110" x2="-5" y2="65" stroke="url(#hub1)" stroke-width="2" opacity="0.5" />
+
+    <!-- Satellite nodes (5, pentagon arrangement) -->
+    <circle cx="65" cy="20" r="14" fill="url(#hub2)" stroke="#aa44ff" stroke-width="1.5" opacity="0.85" />
+    <circle cx="135" cy="65" r="14" fill="url(#hub2)" stroke="#aa44ff" stroke-width="1.5" opacity="0.85" />
+    <circle cx="125" cy="170" r="14" fill="url(#hub2)" stroke="#aa44ff" stroke-width="1.5" opacity="0.85" />
+    <circle cx="5" cy="170" r="14" fill="url(#hub2)" stroke="#aa44ff" stroke-width="1.5" opacity="0.85" />
+    <circle cx="-5" cy="65" r="14" fill="url(#hub2)" stroke="#aa44ff" stroke-width="1.5" opacity="0.85" />
+
+    <!-- Central hub: layered concentric circles -->
+    <circle cx="65" cy="110" r="38" fill="url(#hub1)" opacity="0.9" />
+    <circle cx="65" cy="110" r="26" fill="url(#hub2)" opacity="0.85" />
+    <circle cx="65" cy="110" r="14" fill="#ff44dd" opacity="0.7" />
+  </g>
+
+  <!-- Title: STANDRA -->
+  <text x="260" y="290" font-family="'SF Mono', 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace" font-size="82" font-weight="800" fill="#ffffff" letter-spacing="6">STANDRA</text>
+
+  <!-- Glow line under title -->
+  <rect x="260" y="308" width="740" height="2" fill="url(#accent)" rx="1" />
+  <rect x="260" y="308" width="740" height="2" fill="url(#glow)" filter="url(#softglow)" />
+
+  <!-- Tagline -->
+  <text x="260" y="355" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#8899aa" font-weight="400" letter-spacing="1">Open standards for AI-assisted engineering</text>
+
+  <!-- Feature pills -->
+  <g transform="translate(260, 400)">
+    <!-- Pill 1: CACP -->
+    <rect x="0" y="0" width="120" height="36" rx="18" fill="none" stroke="#0066ff" stroke-width="1.5" opacity="0.6" />
+    <text x="60" y="23" font-family="'SF Mono', monospace" font-size="13" fill="#4488ff" text-anchor="middle" font-weight="500">CACP</text>
+
+    <!-- Pill 2: SIEEVE -->
+    <rect x="135" y="0" width="120" height="36" rx="18" fill="none" stroke="#5544ff" stroke-width="1.5" opacity="0.6" />
+    <text x="195" y="23" font-family="'SF Mono', monospace" font-size="13" fill="#7766ff" text-anchor="middle" font-weight="500">SIEEVE</text>
+
+    <!-- Pill 3: SWITCHYARD -->
+    <rect x="270" y="0" width="155" height="36" rx="18" fill="none" stroke="#aa44ff" stroke-width="1.5" opacity="0.6" />
+    <text x="347" y="23" font-family="'SF Mono', monospace" font-size="13" fill="#cc66ff" text-anchor="middle" font-weight="500">SWITCHYARD</text>
+
+    <!-- Pill 4: AFTERBURN -->
+    <rect x="440" y="0" width="150" height="36" rx="18" fill="none" stroke="#ee44ee" stroke-width="1.5" opacity="0.6" />
+    <text x="515" y="23" font-family="'SF Mono', monospace" font-size="13" fill="#ee66ee" text-anchor="middle" font-weight="500">AFTERBURN</text>
+
+    <!-- Pill 5: PAWBENCH -->
+    <rect x="605" y="0" width="140" height="36" rx="18" fill="none" stroke="#ff44dd" stroke-width="1.5" opacity="0.6" />
+    <text x="675" y="23" font-family="'SF Mono', monospace" font-size="13" fill="#ff66dd" text-anchor="middle" font-weight="500">PAWBENCH</text>
+  </g>
+
+  <!-- Architecture mini-diagram: pipeline phases -->
+  <g transform="translate(260, 470)" opacity="0.5">
+    <!-- TASK -->
+    <rect x="0" y="0" width="100" height="28" rx="4" fill="none" stroke="#0066ff" stroke-width="1" opacity="0.6" />
+    <text x="50" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#4488ff" text-anchor="middle">TASK</text>
+
+    <line x1="110" y1="14" x2="145" y2="14" stroke="#445566" stroke-width="1" />
+    <polygon points="145,10 155,14 145,18" fill="#445566" />
+
+    <!-- CONTEXT -->
+    <rect x="160" y="0" width="100" height="28" rx="4" fill="none" stroke="#5544ff" stroke-width="1" opacity="0.6" />
+    <text x="210" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#7766ff" text-anchor="middle">CONTEXT</text>
+
+    <line x1="270" y1="14" x2="305" y2="14" stroke="#445566" stroke-width="1" />
+    <polygon points="305,10 315,14 305,18" fill="#445566" />
+
+    <!-- DISPATCH -->
+    <rect x="320" y="0" width="100" height="28" rx="4" fill="none" stroke="#aa44ff" stroke-width="1" opacity="0.6" />
+    <text x="370" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#cc66ff" text-anchor="middle">DISPATCH</text>
+
+    <line x1="430" y1="14" x2="465" y2="14" stroke="#445566" stroke-width="1" />
+    <polygon points="465,10 475,14 465,18" fill="#445566" />
+
+    <!-- VERIFY -->
+    <rect x="480" y="0" width="100" height="28" rx="4" fill="none" stroke="#ee44ee" stroke-width="1" opacity="0.6" />
+    <text x="530" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#ee66ee" text-anchor="middle">VERIFY</text>
+
+    <line x1="590" y1="14" x2="625" y2="14" stroke="#445566" stroke-width="1" />
+    <polygon points="625,10 635,14 625,18" fill="#445566" />
+
+    <!-- LEARN -->
+    <rect x="640" y="0" width="100" height="28" rx="4" fill="none" stroke="#ff44dd" stroke-width="1" opacity="0.6" />
+    <text x="690" y="18" font-family="'SF Mono', monospace" font-size="10" fill="#ff66dd" text-anchor="middle">LEARN</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="260" y="560" font-family="'Inter', sans-serif" font-size="14" fill="#445566">The dispatch pipeline for AI coding agents</text>
+  <text x="260" y="582" font-family="'Inter', sans-serif" font-size="13" fill="#334455">github.com/zenprocess/standra</text>
+
+  <!-- Tagline badge (replaces standra.ai badge — this IS standra.ai) -->
+  <g transform="translate(920, 548)">
+    <rect x="0" y="0" width="220" height="40" rx="6" fill="none" stroke="#334455" stroke-width="1" />
+    <text x="110" y="17" font-family="'Inter', sans-serif" font-size="11" fill="#556677" text-anchor="middle">Open source</text>
+    <text x="110" y="33" font-family="'Inter', sans-serif" font-size="14" fill="#8899aa" text-anchor="middle" font-weight="600">standra.ai</text>
+  </g>
+</svg>
