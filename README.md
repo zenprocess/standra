@@ -4,16 +4,7 @@
 
 The dispatch pipeline that makes AI coding agents reliable, measurable, and cheap to run at scale. Composable open-source components — pick the ones you need.
 
-```
-   TASK          CONTEXT         DISPATCH         VERIFY          LEARN
- ┌──────┐      ┌──────┐       ┌──────┐         ┌──────┐        ┌──────┐
- │ Spec │ ───▶ │Filter│  ───▶ │ Run  │   ───▶  │ Gate │  ───▶  │Mine  │
- │  +AC │      │+Rules│       │+Trace│         │+Tests│        │+Tune │
- └──────┘      └──────┘       └──────┘         └──────┘        └──────┘
-   CACP         Sieeve         Switchyard       Switchyard      Afterburn
-                +Axiom         +PawBench
-                                +ServingCard
-```
+![standra.ai ecosystem](diagrams/ecosystem.png)
 
 ---
 
@@ -24,10 +15,6 @@ Most AI coding tools optimize a single agent doing a single task. That's the wro
 The real bottleneck is **orchestration**: dispatching dozens of agents in parallel, giving each just the context it needs, verifying their output before merge, and learning from every dispatch to make the next one better.
 
 `standra.ai` is the open layer for that. Each phase of the pipeline has a focused tool. Use them together or pick one.
-
----
-
-![standra.ai ecosystem](diagrams/ecosystem.png)
 
 ---
 
@@ -56,8 +43,9 @@ A single Switchyard dispatch end-to-end:
 3. **Pre-dispatch doctor** rejects bad dispatches instantly (zero cost)
 4. Agent executes in **isolated git worktree** (Claude or local Hermes/vLLM)
 5. **Gate stack** runs: response gate (9 structural checks), test gate, AC compliance, regression detection, verify
-6. On pass → **merge**. On block → **retry/partial**. On doctor fail → **rejected**
-7. **Telemetry** is mined by **Afterburn** to improve tomorrow's dispatch
+6. **GEPA** ([Goal/Effort/Plan/Assumptions](https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/)) scores the trajectory — 4-dimensional reflective optimization
+7. On pass → **merge**. On block → **retry/partial**. On doctor fail → **rejected**
+8. **Telemetry** is mined by **Afterburn** to improve tomorrow's dispatch
 
 ---
 
@@ -86,6 +74,22 @@ Most AI coding work today is single-shot, manual, and unmeasured. Token costs ar
 - **Cheap** — context compilation is the difference between $0.50 and $5.00 per dispatch
 - **Reliable** — gates catch false-positive "done" claims before they hit your branch
 - **Self-improving** — Afterburn evolves your skills based on what actually worked
+
+---
+
+## Acknowledgements & inspiration
+
+standra.ai stands on the shoulders of researchers and builders who shipped the foundational ideas:
+
+- **[GEPA](https://gepa-ai.github.io/gepa/blog/2026/02/18/introducing-optimize-anything/)** — Goal/Effort/Plan/Assumptions reflective prompt optimization. Switchyard scores every dispatch on these 4 dimensions and feeds the verdict back into routing. *Agrawal et al., 2026*
+- **[RLM (Recursive Language Models)](https://arxiv.org/abs/2512.24601)** — *Zhang, Kraska & Khattab*. The REPL-driven recursive analysis pattern that lets Afterburn process 90MB+ session files no context window can hold.
+- **[CCAR (Claude Code AutoResearch)](https://github.com/mitkox/ccar)** — *Mitko Vasilev*. The autonomous experiment loop Afterburn uses to evolve skills (mutate → benchmark → keep/discard → commit).
+- **[Andrej Karpathy](https://karpathy.ai/)** — *Software 2.0*, *LLM OS*, and the public thinking on agentic systems that frames why orchestration is the real engineering problem, not the model.
+- **[addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)** — *Addy Osmani*. The Save Point Pattern, anti-rationalization tables, and skills-as-gated-workflows pattern that shape how Switchyard structures dispatch prompts.
+- **[DSPy](https://dspy.ai/)** — *Stanford NLP*. The original GEPA optimizer and the systematic approach to LM programming that influenced CACP's structured I/O design.
+- **[LLMLingua](https://github.com/microsoft/LLMLingua)** — *Microsoft Research*. Prompt compression research underpinning Sieeve's tiered context strategy.
+
+If we missed your work and you should be on this list — open an issue.
 
 ---
 
