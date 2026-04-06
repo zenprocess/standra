@@ -29,7 +29,7 @@ The real bottleneck is **orchestration**: dispatching dozens of agents in parall
 | **Task** | Structured I/O — typed fields replace free-form prose. ~200 tokens vs ~2000. | **CACP** | [zenprocess/cacp](https://github.com/zenprocess/cacp) |
 | **Context** | 5-tier submodular file assignment, task-aware retrieval, cache-aware optimization. | **Sieeve** | _open-source release pending_ |
 | **Context (rules)** | Compact, tabular, LLM-native rule definition language. The format Sieeve compiles into. | **Axiom** | [zenprocess/axiom](https://github.com/zenprocess/axiom) |
-| **Dispatch** | Tracker-agnostic, git-native multi-agent dispatcher. Pre-dispatch doctor, response gate, AC compliance, regression detection. | **Switchyard** _(commercial)_ | [Let's talk →](https://cal.com/vvladescu) |
+| **Dispatch** | Tracker-agnostic, git-native multi-agent dispatcher. Pre-dispatch doctor, response gate, AC compliance, regression detection. | **Switchyard** _(in development)_ | _personal R&D · open-source release pending_ |
 | **Verify** | 4-dimensional benchmark harness — multi-turn, multi-agent, parallel dispatch with tool calling. | **PawBench** | [zenprocess/pawbench](https://github.com/zenprocess/pawbench) |
 | **Verify (serving)** | Model registry for optimized LLM serving configurations. The "spec sheet" for self-hosted vLLM. | **ServingCard** | [zenprocess/servingcard](https://github.com/zenprocess/servingcard) |
 | **Learn** | Mines Claude Code session history for friction, patterns, gaps. Evolves your skills via autonomous experiment loops. | **Afterburn** | [zenprocess/afterburn](https://github.com/zenprocess/afterburn) |
@@ -104,7 +104,7 @@ If we missed your work and you should be on this list — open an issue.
 - 💬 Discussions are open
 - 📧 [hello@standra.ai](mailto:hello@standra.ai)
 
-For Switchyard (commercial dispatcher), [let's talk →](https://cal.com/vvladescu).
+Always happy to swap notes with people working on similar problems → [cal.com/vvladescu](https://cal.com/vvladescu) (15min AI/architecture chat).
 
 ---
 
