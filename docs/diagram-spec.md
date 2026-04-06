@@ -29,9 +29,41 @@ project/
 
 Most diagrams fit in a 1200–1400 × 800–900 region. Don't stretch beyond unless the content demands it.
 
+## When to use which palette
+
+Architecture diagrams come in two flavours, each with its own colour rule:
+
+| Diagram type | Colour rule | Example |
+|---|---|---|
+| **Cross-project** (shows multiple standra projects) | **Project chip colours** — every project box uses ITS brand colour from the table below | `ecosystem.png` |
+| **Intra-project** (shows roles within one system) | **Semantic shape colours** — colours encode the role (start, decision, gate, etc.) | `dispatch-flow.png` |
+
+**Rule**: if two boxes in your diagram represent different standra projects, they MUST use different brand colours. Don't paint Sieeve and CACP both purple just because they both "feed context."
+
+---
+
+## Project chip colours
+
+Derived from the brand axis in [design-system.md](design-system.md). Light fill + dark stroke. Use for any element that represents a standra project in a cross-project diagram.
+
+| Project | Fill | Stroke | Notes |
+|---|---|---|---|
+| **standra (parent hub)** | `#0066ff` | `#003388` | Saturated fill, white text inside, stroke width 4 |
+| **Switchyard** | `#cce4ff` | `#0066ff` | Stroke width 3 when shown as a hub |
+| **Sieeve** | `#ead4ff` | `#8833ff` | |
+| **Axiom** | `#e4d9ff` | `#6644dd` | |
+| **CACP** | `#cad0ff` | `#3344ff` | |
+| **Afterburn** | `#fff0c4` | `#ff4500` | |
+| **PawBench** | `#ffd6e4` | `#ff3366` | |
+| **ServingCard** | `#ccffe4` | `#00cc99` | |
+
+Arrows connecting two projects use the **source element's stroke colour**.
+
+---
+
 ## Semantic shape colours
 
-Colours encode meaning. Pick the row that matches the element's role.
+Use these inside intra-project diagrams (where boxes represent roles, not projects).
 
 | Semantic role | Fill | Stroke | Use for |
 |---|---|---|---|
