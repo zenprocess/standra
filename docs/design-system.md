@@ -15,7 +15,7 @@ The standra.ai parent brand uses a **blue → purple → magenta** gradient. Eve
 | Project | Stop 1 | Stop 2 | Stop 3 | Stop 4 | Metaphor |
 |---|---|---|---|---|---|
 | **standra** (parent) | `#0066ff` | `#5544ff` | `#aa44ff` | `#ff44dd` | platform / hub |
-| **Switchyard** | `#0066ff` | `#3388ff` | `#55aaff` | `#88ccff` | rail / signal |
+| **Dispatch** | `#0066ff` | `#3388ff` | `#55aaff` | `#88ccff` | rail / signal |
 | **Sieeve** | `#8833ff` | `#9955ff` | `#aa77ff` | `#cc99ff` | filter / prism |
 | **Axiom** | `#6644dd` | `#8866ee` | `#aa88ff` | `#ccaaff` | rule / law |
 | **CACP** | `#3344ff` | `#5566ff` | `#7788ff` | `#99aaff` | protocol / wire |

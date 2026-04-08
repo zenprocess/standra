@@ -49,7 +49,7 @@ Derived from the brand axis in [design-system.md](design-system.md). Light fill 
 | Project | Fill | Stroke | Notes |
 |---|---|---|---|
 | **standra (parent hub)** | `#0066ff` | `#003388` | Saturated fill, white text inside, stroke width 4 |
-| **Switchyard** | `#cce4ff` | `#0066ff` | Stroke width 3 when shown as a hub |
+| **Dispatch** | `#cce4ff` | `#0066ff` | Stroke width 3 when shown as a hub |
 | **Sieeve** | `#ead4ff` | `#8833ff` | |
 | **Axiom** | `#e4d9ff` | `#6644dd` | |
 | **CACP** | `#cad0ff` | `#3344ff` | |
@@ -67,7 +67,7 @@ Use these inside intra-project diagrams (where boxes represent roles, not projec
 
 | Semantic role | Fill | Stroke | Use for |
 |---|---|---|---|
-| **Hub / primary** | `#3b82f6` | `#1e3a5f` | The thing the diagram is about. Switchyard in the ecosystem map. |
+| **Hub / primary** | `#3b82f6` | `#1e3a5f` | The thing the diagram is about. Dispatch in the ecosystem map. |
 | **Inputs / context** | `#ddd6fe` | `#6d28d9` | CACP, Sieeve, Axiom — anything feeding context in. |
 | **Outputs / success** | `#a7f3d0` | `#047857` | Diagnostics, telemetry, merged results. |
 | **Start / trigger** | `#fed7aa` | `#c2410c` | The initiating task or event. |
@@ -107,7 +107,7 @@ Use the visual pattern that mirrors the concept's behaviour. **Each major concep
 
 | Concept | Pattern | Example |
 |---|---|---|
-| Many things converge on one | **Hub-and-spoke** (radial) | Switchyard with CACP, Sieeve, Axiom feeding in |
+| Many things converge on one | **Hub-and-spoke** (radial) | Dispatch with CACP, Sieeve, Axiom feeding in |
 | Linear sequence of stages | **Horizontal pipeline** | Task → Context → Dispatch → Verify → Merge |
 | Loop / continuous improvement | **Cycle** with return arrow | Telemetry → Afterburn → Sieeve rules |
 | Decision branching | **Diamond** with labelled outgoing edges | Doctor with pass/fail |
